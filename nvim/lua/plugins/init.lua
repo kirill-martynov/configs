@@ -12,8 +12,5 @@ require "paq" {
 
   "hoob3rt/lualine.nvim";
 
-  {
-    "prettier/vim-prettier", 
-    run = 'yarn install'
-  };
+  { "npxbr/glow.nvim", run = "GlowInstall" };
 }

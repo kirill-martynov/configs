@@ -9,3 +9,6 @@ end
 
 -- nvim-tree
 key_mapper('', '<C-n>', ':NvimTreeToggle<CR>')
+
+-- glow markdown
+key_mapper('', '<leader>g', ':Glow<CR>')
