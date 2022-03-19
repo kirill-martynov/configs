@@ -38,6 +38,8 @@ return require('packer').startup(function(use)
   use { 'tpope/vim-surround' }
   use { 'mhartington/formatter.nvim' }
   use { 'numToStr/Comment.nvim' }
+  use { 'windwp/nvim-autopairs' }
+  use { 'gpanders/editorconfig.nvim' }
 
   -- [[ Git ]]
   use { 'lewis6991/gitsigns.nvim' }

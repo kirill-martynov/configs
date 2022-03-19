@@ -32,6 +32,7 @@ vim.cmd([[
 ]])
 
 require('Comment').setup()
+require('nvim-autopairs').setup{}
 
 local formatter = require("formatter")
 
