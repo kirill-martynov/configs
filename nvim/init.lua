@@ -26,6 +26,11 @@ require('gitsigns').setup{
   }
 }
 
+vim.cmd([[
+  let g:gitblame_enabled = 0
+  let g:gitblame_date_format = '%r'
+]])
+
 local formatter = require("formatter")
 
 local prettierConfig = function()
