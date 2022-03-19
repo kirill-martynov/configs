@@ -37,6 +37,7 @@ return require('packer').startup(function(use)
   -- [[ Editing ]]
   use { 'tpope/vim-surround' }
   use { 'mhartington/formatter.nvim' }
+  use { 'numToStr/Comment.nvim' }
 
   -- [[ Git ]]
   use { 'lewis6991/gitsigns.nvim' }

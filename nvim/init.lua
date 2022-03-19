@@ -31,6 +31,8 @@ vim.cmd([[
   let g:gitblame_date_format = '%r'
 ]])
 
+require('Comment').setup()
+
 local formatter = require("formatter")
 
 local prettierConfig = function()
