@@ -6,8 +6,6 @@ return require('packer').startup(function(use)
   use {'nvim-telescope/telescope-fzf-native.nvim', run = 'make' }
 
   -- [[ UI ]]
-  use { 'arcticicestudio/nord-vim' }
-  use { 'overcache/NeoSolarized' }
   use { 'ishan9299/nvim-solarized-lua' }
   use { 'nvim-lua/plenary.nvim' }
   use { 'kyazdani42/nvim-web-devicons' }
@@ -40,6 +38,7 @@ return require('packer').startup(function(use)
   use { 'tpope/vim-surround' }
   use { 'numToStr/Comment.nvim' }
   use { 'windwp/nvim-autopairs' }
+  use { 'windwp/nvim-ts-autotag' }
   use { 'gpanders/editorconfig.nvim' }
 
   -- [[ Git ]]

@@ -46,7 +46,7 @@ for key, value in pairs(options) do
   vim.opt[key] = value
 end
 
-cmd("colorscheme NeoSolarized")
+cmd("colorscheme solarized")
 
 vim.highlight.create('Normal', { guibg = "NONE", ctermbg = "NONE" }, false);
 vim.highlight.create('LineNR', { guibg = "NONE", ctermbg = "NONE" }, false);
