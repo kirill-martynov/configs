@@ -22,8 +22,6 @@ require('nvim-autopairs').setup{}
 
 require('nvim-bufferline')
 require('nvim-tr')
--- require('nvim-formatter')
-require('nvim-null-ls')
 require('nvim-null-ls')
 require('nvim-lualine')
 require('nvim-telescope')
