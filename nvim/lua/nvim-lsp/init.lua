@@ -4,7 +4,12 @@ local map = vim.api.nvim_buf_set_keymap
 local opts = { noremap = true, silent = true }
 
 local on_attach = function(client, bufnr)
+  client.resolved_capabilities.document_formatting = false
+  client.resolved_capabilities.document_range_formatting = false
+
   vim.api.nvim_buf_set_option(bufnr, 'omnifunc', 'v:lua.vim.lsp.omnifunc')
+
+  vim.cmd[[ command! Format execute 'lua vim.lsp.buf.formatting_sync()' ]]
 
   -- [[ LSP Mapping ]]
   map(bufnr, 'n', 'gD', '<cmd>lua vim.lsp.buf.declaration()<CR>', opts)
@@ -41,6 +46,10 @@ nvim_lsp.eslint.setup {
   flags = {
     debounce_text_changes = 150,
   }
+}
+
+nvim_lsp.stylelint_lsp.setup{
+  on_attach = on_attach,
 }
 
 -- [[ LSP Saga ]]

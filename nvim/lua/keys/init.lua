@@ -9,7 +9,7 @@ map('n', '<S-Tab>', ':BufferLineCyclePrev<CR>', default_opts)
 -- [[ Nvim-Tree ]]
 map('n', '<C-n>', ':NvimTreeToggle<CR>', default_opts)
 
--- [[ Formatter ]]
+-- [[ Formatting ]]
 map('n', '<leader>f', ':Format<CR>', default_opts) 
 
 -- [[ Telescope ]]

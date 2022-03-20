@@ -1,49 +1,55 @@
--- [[ opts ]]
-local opt = vim.opt
 local cmd = vim.api.nvim_command
 
-vim.bo.swapfile = false
-vim.o.backspace = 'indent,eol,start'
-vim.wo.wrap = true
-vim.wo.linebreak = true
-vim.wo.breakindent = true
+local options = {
+  swapfile = false,
+  clipboard = 'unnamed',
+  completeopt = 'menu,menuone,noselect',
+  encoding = "utf8",
+  fileencoding = "utf8",
+  backspace = 'indent,eol,start',
+  updatetime = 100,
 
--- [[ Filetypes ]]
-opt.encoding = "utf8"
-opt.fileencoding = "utf8"
-opt.completeopt = 'menu,menuone,noselect'
+  -- [[ Theme ]]
+  syntax = "ON",
+  termguicolors = true,
+  guicursor = '',
+  cursorline = true,
 
--- [[ Theme ]]
-opt.syntax = "ON"
-opt.termguicolors = true
-opt.guicursor = ''
-opt.cursorline = true
+  -- [[ Editor ]]
+  expandtab = true,
+  shiftwidth = 2,
+  softtabstop = 2,
+  tabstop = 2,
+  smartindent = true,
+  wrap = true,
+  linebreak = true,
+  breakindent = true,
+  conceallevel = 0,
+
+  -- [[ Context ]]
+  number = true,
+  numberwidth = 3,
+  scrolloff = 10,
+  signcolumn = "yes",
+
+  -- [[ Search ]]
+  ignorecase = true,
+  smartcase = true,
+  incsearch = true,
+
+  -- [[ Splits ]]
+  splitright = true,
+  splitbelow = true
+}
+
+for key, value in pairs(options) do
+  vim.opt[key] = value
+end
 
 cmd("colorscheme NeoSolarized")
-cmd("hi Normal guibg=NONE ctermbg=NONE")
-cmd("hi LineNR guibg=NONE ctermbg=NONE")
-cmd("hi CursorLine guibg=NONE ctermbg=NONE")
-cmd("hi CursorLineNR guibg=NONE ctermbg=NONE")
 
--- [[ Editor ]]
-opt.expandtab = true
-opt.shiftwidth = 2
-opt.softtabstop = 2
-opt.tabstop = 2
-opt.smartindent = true
-
--- [[ Context ]]
-opt.number = true
-opt.numberwidth = 3
-opt.scrolloff = 10 
-opt.signcolumn = "yes"
-
--- [[ Search ]]
-opt.ignorecase = true
-opt.smartcase = true
-opt.incsearch = true
-
--- [[ Splits ]]
-opt.splitright = true
-opt.splitbelow = true
-
+vim.highlight.create('Normal', { guibg = "NONE", ctermbg = "NONE" }, false);
+vim.highlight.create('LineNR', { guibg = "NONE", ctermbg = "NONE" }, false);
+vim.highlight.create('CursorLine', { guibg = "NONE", ctermbg = "NONE" }, false);
+vim.highlight.create('CursorLineNR', { guibg = "NONE", ctermbg = "NONE" }, false);
+vim.highlight.create('VertSplit', { guibg = "NONE", guifg = "#4c566a" }, false);

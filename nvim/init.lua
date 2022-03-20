@@ -5,20 +5,6 @@ require('keys')
 require('plugs')
 
 -- PLUGINS
-require('bufferline').setup{
-  options = {
-    show_buffer_close_icons = false,
-    show_close_icon = false,
-  }
-}
-require('nvim-tree').setup{
-  update_focused_file = {
-    enable      = true,
-    update_cwd  = true,
-    ignore_list = {}
-  },
-}
-
 require('gitsigns').setup{
   signs = {
     delete = {},
@@ -34,36 +20,11 @@ vim.cmd([[
 require('Comment').setup()
 require('nvim-autopairs').setup{}
 
-local formatter = require("formatter")
-
-local prettierConfig = function()
-  return {
-    exe = "prettier",
-    args = { "--stdin-filepath", vim.fn.shellescape(vim.api.nvim_buf_get_name(0)) },
-    stdin = true
-  }
-end
-
-formatter.setup({
-  filetype = {
-    html = {prettierConfig},
-    css = {prettierConfig},
-    scss = {prettierConfig},
-    javascript = {prettierConfig},
-    javascriptreact = {prettierConfig},
-    typescript = {prettierConfig},
-    typescriptreact = {prettierConfig},
-    json = {prettierConfig}
-  }
-})
-
-vim.api.nvim_exec([[
-  augroup FormatAutogroup
-    autocmd!
-    autocmd BufWritePost *.js,*.jsx,*.ts,*.tsx FormatWrite
-  augroup END
-]], true)
-
+require('nvim-bufferline')
+require('nvim-tr')
+-- require('nvim-formatter')
+require('nvim-null-ls')
+require('nvim-null-ls')
 require('nvim-lualine')
 require('nvim-telescope')
 require('nvim-ts')
