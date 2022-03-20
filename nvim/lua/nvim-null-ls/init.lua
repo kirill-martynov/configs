@@ -16,8 +16,7 @@ nvim_null_ls.setup({
   end,
 
   sources = {
-    formatting.prettier,
-
+    formatting.prettierd,
     formatting.stylelint,
   }
 })

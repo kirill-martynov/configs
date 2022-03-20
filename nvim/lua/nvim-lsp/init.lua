@@ -50,6 +50,29 @@ nvim_lsp.eslint.setup {
 
 nvim_lsp.stylelint_lsp.setup{
   on_attach = on_attach,
+  capabilities = cmp_capabilities,
+
+  filetypes = {
+    "css",
+    "scss",
+    "sass",
+    "less"
+  },
+  flags = {
+    debounce_text_changes = 150,
+  }
+}
+
+-- local capabilities = vim.lsp.protocol.make_client_capabilities()
+-- capabilities.textDocument.completion.completionItem.snippetSupport = true
+
+nvim_lsp.cssls.setup {
+  on_attach = on_attach,
+  capabilities = cmp_capabilities,
+
+  flags = {
+    debounce_text_changes = 150,
+  }
 }
 
 -- [[ LSP Saga ]]
