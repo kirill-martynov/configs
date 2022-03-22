@@ -2,6 +2,7 @@ local nvim_telescope = require('telescope')
 
 nvim_telescope.setup{
   defaults = {
+    prompt_prefix = "$ ",
     file_ignore_patterns = { "node_modules", ".git" }
   },
 
@@ -10,7 +11,7 @@ nvim_telescope.setup{
       hidden = true,
       previewer = false,
       layout_config = {
-        horizontal = { width = 0.3, height = 0.4, prompt_position = "top" },
+        horizontal = { width = 80, height = 0.4, prompt_position = "top" },
       }
     },
   },

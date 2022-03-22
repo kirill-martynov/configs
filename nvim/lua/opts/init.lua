@@ -30,7 +30,7 @@ local options = {
   number = true,
   numberwidth = 3,
   scrolloff = 10,
-  signcolumn = "yes",
+  signcolumn = "number",
 
   -- [[ Search ]]
   ignorecase = true,
@@ -48,8 +48,16 @@ end
 
 cmd("colorscheme solarized")
 
+vim.highlight.create('GitSignsAdd', { guibg = "NONE", ctermbg = "NONE" }, false);
+vim.highlight.create('GitSignsChange', { guibg = "NONE", ctermbg = "NONE" }, false);
+vim.highlight.create('GitSignsDelete', { guibg = "NONE", ctermbg = "NONE" }, false);
+vim.highlight.create('GitSignsChange', { guibg = "NONE", ctermbg = "NONE" }, false);
+
 vim.highlight.create('Normal', { guibg = "NONE", ctermbg = "NONE" }, false);
 vim.highlight.create('LineNR', { guibg = "NONE", ctermbg = "NONE" }, false);
 vim.highlight.create('CursorLine', { guibg = "NONE", ctermbg = "NONE" }, false);
 vim.highlight.create('CursorLineNR', { guibg = "NONE", ctermbg = "NONE" }, false);
+vim.highlight.create('SignColumn', { guibg = "NONE", ctermbg = "NONE" }, false);
 vim.highlight.create('VertSplit', { guibg = "NONE", guifg = "#4c566a" }, false);
+vim.highlight.create('MatchParen', { guibg = "NONE", ctermbg = "NONE" }, false);
+

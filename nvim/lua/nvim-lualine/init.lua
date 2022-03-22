@@ -16,6 +16,7 @@ nvim_lualine.setup{
         sources = {"nvim_lsp"}, 
         symbols = {error = ' ', warn = ' ', info = ' ', hint = ' '} 
       },
+      'diff',
       'branch'
     },
     lualine_y = {},
