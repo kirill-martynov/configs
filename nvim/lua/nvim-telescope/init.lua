@@ -1,13 +1,17 @@
+-- [[ Telescope ]]
 local nvim_telescope = require('telescope')
+local actions = require('telescope.actions')
 
 nvim_telescope.setup{
   defaults = {
     prompt_prefix = "$ ",
-    file_ignore_patterns = { "node_modules", ".git" }
+
+    file_ignore_patterns = { "node_modules", ".git/" },
   },
 
   pickers = {
     find_files = {
+      path_display = { "smart" },
       hidden = true,
       previewer = false,
       layout_config = {

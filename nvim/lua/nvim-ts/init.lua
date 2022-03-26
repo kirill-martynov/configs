@@ -1,3 +1,4 @@
+-- [[ Treesitter ]]
 local nvim_treesitter = require('nvim-treesitter.configs')
 
 nvim_treesitter.setup {
@@ -6,5 +7,10 @@ nvim_treesitter.setup {
     enable = true,
 
     additional_vim_regex_highlighting = false
+  },
+  textobjects = {
+    select = {
+      enable = true
+    }
   }
 }

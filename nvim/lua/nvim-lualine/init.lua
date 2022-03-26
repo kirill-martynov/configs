@@ -9,13 +9,15 @@ nvim_lualine.setup{
   sections = {
     lualine_a = {'mode'},
     lualine_b = {},
-    lualine_c = {'filename'},
-    lualine_x = {
+    lualine_c = {
+      'filename',
       {
         'diagnostics', 
         sources = {"nvim_lsp"}, 
-        symbols = {error = ' ', warn = ' ', info = ' ', hint = ' '} 
+        symbols = {error = ' ', warn = ' ', info = ' ', hint = ' '}
       },
+    },
+    lualine_x = {
       'diff',
       'branch'
     },

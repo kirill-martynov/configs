@@ -46,30 +46,37 @@ root: ~/
 
 windows:
   - main:
-      layout: 29f7,160x42,0,0{79x42,0,0,0,80x42,80,0[80x21,80,0,2,80x20,80,22,4]} 
+      layout: 29f7,160x42,0,0{79x42,0,0,0,80x42,80,0[80x21,80,0,2,80x20,80,22,4]}
       root: ~
       panes:
-        - #empty
-        - #empty 
-        - #empty 
+        -  #empty
+        -  #empty
+        -  #empty
   - work:
       layout: e778,281x45,0,0[281x39,0,0,10,281x5,0,40{140x5,0,40,16,140x5,141,40,18}]
       root: ~/Documents/work/lms-ts
       panes:
         - nvim .
-        - #empty
-        - #empty
+        -  #empty
+        -  #empty
   - project:
       layout: e778,281x45,0,0[281x39,0,0,10,281x5,0,40{140x5,0,40,16,140x5,141,40,18}]
       root: ~/Documents/projects
       panes:
-        - #empty
-        - #empty
-        - #empty
+        -  #empty
+        -  #empty
+        -  #empty
   - study:
       layout: e778,281x45,0,0[281x39,0,0,10,281x5,0,40{140x5,0,40,16,140x5,141,40,18}]
       root: ~/Documents/study
       panes:
-        - #empty
-        - #empty
-        - #empty
+        -  #empty
+        -  #empty
+        -  #empty
+  - lms-ts:
+      layout: bf3e,280x48,0,0{228x48,0,0,4,51x48,229,0[51x24,229,0,13,51x23,229,25,14]}
+      root: ~/Documents/work/lms-ts
+      panes:
+        - nvim .
+        -  #empty
+        -  #empty

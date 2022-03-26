@@ -15,4 +15,6 @@ map('n', '<leader>f', ':Format<CR>', default_opts)
 -- [[ Telescope ]]
 map('n', '<C-p>', ':Telescope find_files<CR>', {})
 map('n', '<leader>fg', ':Telescope live_grep<CR>', {})
-
+map('n', '<leader>fs', ':Telescope grep_string<CR>', {})
+map('n', '<leader>fc', ':Telescope current_buffer_fuzzy_find<CR>', {})
+map('n', '<leader>gs', ':Telescope git_status<CR>', {})
