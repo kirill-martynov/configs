@@ -2,10 +2,10 @@ local cmd = vim.api.nvim_command
 
 local options = {
   swapfile = false,
-  clipboard = 'unnamed',
+  clipboard = 'unnamedplus',
   completeopt = 'menu,menuone,noselect',
-  encoding = "utf8",
-  fileencoding = "utf8",
+  encoding = 'utf8',
+  fileencoding = 'utf8',
   backspace = 'indent,eol,start',
   updatetime = 100,
 
@@ -28,9 +28,9 @@ local options = {
 
   -- [[ Context ]]
   number = true,
-  numberwidth = 3,
+  numberwidth = 2,
   scrolloff = 10,
-  signcolumn = "number",
+  signcolumn = "yes",
 
   -- [[ Search ]]
   ignorecase = true,

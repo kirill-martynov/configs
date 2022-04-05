@@ -1,9 +1,9 @@
-local nvim_null_ls = require('null-ls');
+local config = require('null-ls');
 
-local formatting = nvim_null_ls.builtins.formatting
-local diagnostics = nvim_null_ls.builtins.diagnostics
+local formatting = config.builtins.formatting
+local diagnostics = config.builtins.diagnostics
 
-nvim_null_ls.setup({
+config.setup({
   on_attach = function(client)
     if client.resolved_capabilities.document_formatting then
         vim.cmd([[

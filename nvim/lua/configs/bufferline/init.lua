@@ -1,6 +1,7 @@
-local nvim_bufferline = require('bufferline')
+--[[ Bufferline ]]
+local config = require('bufferline')
 
-nvim_bufferline.setup{
+config.setup {
   options = {
     mode = "tabs",
     show_buffer_close_icons = false,

@@ -41,8 +41,8 @@ return require('packer').startup(function(use)
   use { 'windwp/nvim-autopairs' }
   use { 'windwp/nvim-ts-autotag' }
   use { 'gpanders/editorconfig.nvim' }
+  use { 'JoosepAlviste/nvim-ts-context-commentstring' }
 
   -- [[ Git ]]
   use { 'lewis6991/gitsigns.nvim' }
-  use { 'f-person/git-blame.nvim' }
 end)

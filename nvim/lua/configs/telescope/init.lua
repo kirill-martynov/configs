@@ -1,8 +1,8 @@
 -- [[ Telescope ]]
-local nvim_telescope = require('telescope')
+local config = require('telescope')
 local actions = require('telescope.actions')
 
-nvim_telescope.setup{
+config.setup{
   defaults = {
     prompt_prefix = "$ ",
 
@@ -31,4 +31,4 @@ nvim_telescope.setup{
 
 }
 
-nvim_telescope.load_extension('fzf')
+config.load_extension('fzf')

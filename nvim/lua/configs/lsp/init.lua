@@ -30,23 +30,18 @@ end
 
 local cmp_capabilities = require('cmp_nvim_lsp').update_capabilities(vim.lsp.protocol.make_client_capabilities())
 
-nvim_lsp.tsserver.setup {
-  on_attach = on_attach,
-  capabilities = cmp_capabilities,
+local servers = { 'tsserver', 'eslint', 'cssls' }
 
-  flags = {
-    debounce_text_changes = 150,
+for _, lsp in pairs(servers) do
+  nvim_lsp[lsp].setup {
+    on_attach = on_attach,
+    capabilities = cmp_capabilities,
+
+    flags = {
+      debounce_text_changes = 150,
+    }
   }
-}
-
-nvim_lsp.eslint.setup {
-  on_attach = on_attach,
-  capabilities = cmp_capabilities,
-
-  flags = {
-    debounce_text_changes = 150,
-  }
-}
+end
 
 nvim_lsp.stylelint_lsp.setup{
   on_attach = on_attach,
@@ -58,27 +53,25 @@ nvim_lsp.stylelint_lsp.setup{
     "sass",
     "less"
   },
-  flags = {
-    debounce_text_changes = 150,
-  }
-}
-
--- local capabilities = vim.lsp.protocol.make_client_capabilities()
--- capabilities.textDocument.completion.completionItem.snippetSupport = true
-
-nvim_lsp.cssls.setup {
-  on_attach = on_attach,
-  capabilities = cmp_capabilities,
 
   flags = {
     debounce_text_changes = 150,
   }
 }
+
+vim.diagnostic.config({ 
+  signs = false,
+  underline = false,
+
+  virtual_text = {
+    prefix = '● ',
+  }
+})
 
 -- [[ LSP Saga ]]
-require('lspsaga').setup{
-  error_sign = ' ', 
-  warn_sign = ' ', 
-  infor_sign = ' ', 
-  hint_sign = ' '
+require('lspsaga').setup {
+  error_sign = "",
+  warn_sign = "",
+  hint_sign = "",
+  infor_sign = "",
 }

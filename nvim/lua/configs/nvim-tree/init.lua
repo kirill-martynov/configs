@@ -1,6 +1,6 @@
-local nvim_tree = require('nvim-tree')
+local config = require('nvim-tree')
 
-nvim_tree.setup{
+config.setup {
   view = {
     width = 40
   },
