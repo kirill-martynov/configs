@@ -1,6 +1,6 @@
 # /Users/kirchik/.config/tmuxinator/default.yml
 
-name: default
+name: desktop
 root: ~/
 
 # Optional tmux socket
