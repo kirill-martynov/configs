@@ -42,6 +42,7 @@ return require('packer').startup(function(use)
   use { 'windwp/nvim-ts-autotag' }
   use { 'gpanders/editorconfig.nvim' }
   use { 'JoosepAlviste/nvim-ts-context-commentstring' }
+  use { 'RRethy/vim-illuminate' }
 
   -- [[ Git ]]
   use { 'lewis6991/gitsigns.nvim' }
