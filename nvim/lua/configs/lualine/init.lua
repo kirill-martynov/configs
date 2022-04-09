@@ -1,6 +1,6 @@
 local config = require('lualine')
 
-config.setup{
+config.setup {
   options = {
     theme = 'solarized_dark',
     component_separators = '',
@@ -12,9 +12,9 @@ config.setup{
     lualine_c = {
       'filename',
       {
-        'diagnostics', 
-        sources = {"nvim_lsp"}, 
-        symbols = { error = " ", warn = " ", hint = " ", info = " " },
+        'diagnostics',
+        sources = {"nvim_lsp"},
+        symbols = { error = " ", warn = " ", hint = " ", info = "" },
       },
     },
     lualine_x = {

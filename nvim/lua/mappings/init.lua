@@ -18,3 +18,8 @@ map('n', '<leader>fg', ':Telescope live_grep<CR>', {})
 map('n', '<leader>fs', ':Telescope grep_string<CR>', {})
 map('n', '<leader>fc', ':Telescope current_buffer_fuzzy_find<CR>', {})
 map('n', '<leader>gs', ':Telescope git_status<CR>', {})
+
+
+-- [[ Illuminate ]]
+map('n', '<leader>n', '<cmd>lua require"illuminate".next_reference{wrap=true}<cr>', {noremap=true})
+map('n', '<leader>p', '<cmd>lua require"illuminate".next_reference{reverse=true,wrap=true}<cr>', {noremap=true})
