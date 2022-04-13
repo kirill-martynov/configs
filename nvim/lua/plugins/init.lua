@@ -3,16 +3,20 @@
 return require('packer').startup(function(use)
   use { 'wbthomason/packer.nvim' }
 
-  use {'nvim-telescope/telescope-fzf-native.nvim', run = 'make' }
-
   -- [[ UI ]]
   use { 'ishan9299/nvim-solarized-lua' }
-  use { 'nvim-lua/plenary.nvim' }
   use { 'kyazdani42/nvim-web-devicons' }
   use { 'kyazdani42/nvim-tree.lua' }
   use { 'nvim-lualine/lualine.nvim' }
-  use { 'akinsho/bufferline.nvim' }
-  use { 'nvim-telescope/telescope.nvim' }
+  use { 'akinsho/bufferline.nvim', tag = '*' }
+  use { 
+	  'nvim-telescope/telescope.nvim', 
+	  requires = {
+		  { 'nvim-lua/plenary.nvim' },
+		  {'nvim-telescope/telescope-fzf-native.nvim', run = 'make' }
+	  }
+  }
+
 
   -- [[ IntelliSense ]]
   use {
@@ -24,6 +28,7 @@ return require('packer').startup(function(use)
   use { 'williamboman/nvim-lsp-installer' }
   use { 'jose-elias-alvarez/null-ls.nvim'}
   use { 'tami5/lspsaga.nvim', branch = 'nvim6.0' }
+  use { "folke/trouble.nvim" }
 
   -- [[ Autocompletion ]]
   use { 'hrsh7th/cmp-nvim-lsp' }

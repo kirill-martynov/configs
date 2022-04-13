@@ -4,6 +4,7 @@ local formatting = config.builtins.formatting
 local diagnostics = config.builtins.diagnostics
 
 config.setup({
+  debug = false,
   on_attach = function(client)
     if client.resolved_capabilities.document_formatting then
         vim.cmd([[

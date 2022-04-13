@@ -1,5 +1,5 @@
 local config = {
-  filetypes = { "css", "scss", "sass", "less" }
+  filetypes = { "css", "scss", "sass", "less" },
 }
 
 return config

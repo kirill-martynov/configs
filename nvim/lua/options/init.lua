@@ -46,7 +46,7 @@ for key, value in pairs(options) do
   vim.opt[key] = value
 end
 
-cmd("colorscheme solarized")
+cmd("colorscheme solarized-flat")
 
 vim.highlight.create('GitSignsAdd', { guibg = "NONE", ctermbg = "NONE" }, false);
 vim.highlight.create('GitSignsChange', { guibg = "NONE", ctermbg = "NONE" }, false);

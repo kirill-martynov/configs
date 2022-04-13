@@ -18,3 +18,4 @@ require('configs.autotag')
 require('configs.comment')
 require('configs.gitsigns')
 require('configs.illuminate')
+

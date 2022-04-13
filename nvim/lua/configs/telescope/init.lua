@@ -2,33 +2,32 @@
 local config = require('telescope')
 local actions = require('telescope.actions')
 
+
+local find_files_config = {
+  hidden = true,
+  previewer = false,
+
+  sorting_strategy = 'ascending',
+  results_title = '',
+  prompt_title = '',
+
+  path_display = { "truncate" },
+
+  layout_config = {
+    horizontal = { width = 80, height = 0.4, prompt_position = "top" },
+  }
+}
+
 config.setup{
   defaults = {
     prompt_prefix = "$ ",
-
     file_ignore_patterns = { "node_modules", ".git/" },
+    color_devicons = false,
   },
 
   pickers = {
-    find_files = {
-      path_display = { "smart" },
-      hidden = true,
-      previewer = false,
-      layout_config = {
-        horizontal = { width = 80, height = 0.4, prompt_position = "top" },
-      }
-    },
-  },
-
-  extensions = {
-    fzf = {
-      fuzzy = true,                    -- false will only do exact matching
-      override_generic_sorter = true,  -- override the generic sorter
-      override_file_sorter = true,     -- override the file sorter
-      case_mode = "smart_case",        -- or "ignore_case" or "respect_case"
-    }
+    find_files = find_files_config,
   }
-
 }
 
 config.load_extension('fzf')
