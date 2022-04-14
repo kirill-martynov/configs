@@ -2,6 +2,7 @@ local config = require('lualine')
 
 config.setup {
   options = {
+    globalstatus = true,
     theme = 'solarized_dark',
     component_separators = '',
     section_separators = '',

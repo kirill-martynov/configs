@@ -6,11 +6,16 @@ return require('packer').startup(function(use)
   -- [[ UI ]]
   use { 'ishan9299/nvim-solarized-lua' }
   use { 'kyazdani42/nvim-web-devicons' }
+  use { 'goolord/alpha-nvim' }
   use { 'kyazdani42/nvim-tree.lua' }
   use { 'nvim-lualine/lualine.nvim' }
   use { 'akinsho/bufferline.nvim', tag = '*' }
-  use { 
-	  'nvim-telescope/telescope.nvim', 
+  use {
+  "nvim-telescope/telescope-frecency.nvim",
+  requires = {"tami5/sqlite.lua"}
+  }
+  use {
+	  'nvim-telescope/telescope.nvim',
 	  requires = {
 		  { 'nvim-lua/plenary.nvim' },
 		  {'nvim-telescope/telescope-fzf-native.nvim', run = 'make' }

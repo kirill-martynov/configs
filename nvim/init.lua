@@ -5,6 +5,7 @@ require('plugins')
 require('mappings')
 
 -- [[ PLUGINS ]]
+require('configs.alpha-nvim')
 require('configs.bufferline')
 require('configs.nvim-tree')
 require('configs.lualine')
