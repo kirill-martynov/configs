@@ -30,7 +30,7 @@ return require('packer').startup(function(use)
   }
   use { "nvim-treesitter/nvim-treesitter-textobjects" }
   use { 'neovim/nvim-lspconfig' }
-  use { 'williamboman/nvim-lsp-installer' }
+  -- use { 'williamboman/nvim-lsp-installer' }
   use { 'jose-elias-alvarez/null-ls.nvim'}
   use { 'tami5/lspsaga.nvim', branch = 'nvim6.0' }
   use { "folke/trouble.nvim" }

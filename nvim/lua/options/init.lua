@@ -46,18 +46,19 @@ for key, value in pairs(options) do
   vim.opt[key] = value
 end
 
-cmd("colorscheme solarized-flat")
+cmd("colorscheme solarized")
 
 vim.highlight.create('GitSignsAdd', { guibg = "NONE", ctermbg = "NONE" }, false);
 vim.highlight.create('GitSignsChange', { guibg = "NONE", ctermbg = "NONE" }, false);
 vim.highlight.create('GitSignsDelete', { guibg = "NONE", ctermbg = "NONE" }, false);
 vim.highlight.create('GitSignsChange', { guibg = "NONE", ctermbg = "NONE" }, false);
 
+-- Make background transparent
 vim.highlight.create('Normal', { guibg = "NONE", ctermbg = "NONE" }, false);
-vim.highlight.create('LineNR', { guibg = "NONE", ctermbg = "NONE" }, false);
+
 vim.highlight.create('CursorLine', { guibg = "NONE", ctermbg = "NONE" }, false);
 vim.highlight.create('CursorLineNR', { guibg = "NONE", ctermbg = "NONE" }, false);
+vim.highlight.create('MatchParen', { guibg = "NONE", ctermbg = "NONE" }, false);
+vim.highlight.create('LineNR', { guibg = "NONE", ctermbg = "NONE" }, false);
 vim.highlight.create('SignColumn', { guibg = "NONE", ctermbg = "NONE" }, false);
 vim.highlight.create('VertSplit', { guibg = "NONE", guifg = "#4c566a" }, false);
-vim.highlight.create('MatchParen', { guibg = "NONE", ctermbg = "NONE" }, false);
-

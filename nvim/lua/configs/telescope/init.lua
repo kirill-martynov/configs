@@ -13,7 +13,7 @@ local find_files_config = {
 
 
   layout_config = {
-    horizontal = { width = 80, height = 0.4, prompt_position = "top" },
+    horizontal = { width = 90, height = 0.5, prompt_position = "top" },
   }
 }
 

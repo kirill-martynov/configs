@@ -49,7 +49,7 @@ local function keymaps(bufnr)
   map(bufnr, "n", "<C-d>", "<cmd>lua require('lspsaga.action').smart_scroll_with_saga(1, '<c-d>')<cr>", {})
 
   -- [[ Commands ]]
-    vim.cmd[[ command! Format execute 'lua vim.lsp.buf.formatting_sync()' ]]
+  vim.cmd[[ command! Format execute 'lua vim.lsp.buf.formatting_sync()' ]]
 end
 
 M.on_attach = function(client, bufnr)
