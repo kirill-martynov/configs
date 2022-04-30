@@ -7,7 +7,7 @@ map('n', '<Tab>', ':BufferLineCycleNext<CR>', default_opts)
 map('n', '<S-Tab>', ':BufferLineCyclePrev<CR>', default_opts)
 
 -- [[ Nvim-Tree ]]
-map('n', '<C-n>', ':NvimTreeToggle<CR>', default_opts)
+map('n', '<leader>t', ':NvimTreeToggle<CR>', default_opts)
 map('n', '<leader>sf', ':NvimTreeFindFile<CR>', default_opts)
 
 -- [[ Formatting ]]
