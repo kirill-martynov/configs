@@ -23,4 +23,7 @@ alias gst="git status"
 alias go="git checkout"
 alias gb="git branch"
 
+# Remove all branches except master
+alias gbr="git branch | grep -v "master" | xargs git branch -D"
+
 alias luamake=/Users/kirchik/Downloads/lua-language-server/3rd/luamake/luamake
