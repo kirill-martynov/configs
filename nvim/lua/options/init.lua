@@ -48,6 +48,8 @@ end
 
 cmd("colorscheme solarized")
 
+-- require('onenord').setup()
+
 vim.highlight.create('GitSignsAdd', { guibg = "NONE", ctermbg = "NONE" }, false);
 vim.highlight.create('GitSignsChange', { guibg = "NONE", ctermbg = "NONE" }, false);
 vim.highlight.create('GitSignsDelete', { guibg = "NONE", ctermbg = "NONE" }, false);
@@ -55,7 +57,7 @@ vim.highlight.create('GitSignsChange', { guibg = "NONE", ctermbg = "NONE" }, fal
 
 -- Make background transparent
 vim.highlight.create('Normal', { guibg = "NONE", ctermbg = "NONE" }, false);
-
+--
 vim.highlight.create('CursorLine', { guibg = "NONE", ctermbg = "NONE" }, false);
 vim.highlight.create('CursorLineNR', { guibg = "NONE", ctermbg = "NONE" }, false);
 vim.highlight.create('MatchParen', { guibg = "NONE", ctermbg = "NONE" }, false);

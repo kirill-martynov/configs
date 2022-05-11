@@ -15,7 +15,7 @@ config.setup {
       {
         'diagnostics',
         sources = {"nvim_lsp"},
-        symbols = { error = " ", warn = " ", hint = " ", info = "" },
+        symbols = { error = "  ", warn = "  ", hint = "  ", info = "  " },
       },
     },
     lualine_x = {
