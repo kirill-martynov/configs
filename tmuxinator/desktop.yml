@@ -30,7 +30,7 @@ root: ~/
 # pre_window: rbenv shell 2.0.0-p247
 
 # Pass command line options to tmux. Useful for specifying a different tmux.conf.
-# tmux_options: -f ~/.tmux.mac.conf
+tmux_options: -f ~/.config/tmux/.tmux.conf
 
 # Change the command to call tmux.  This can be used by derivatives/wrappers like byobu.
 # tmux_command: byobu
@@ -56,26 +56,33 @@ windows:
       layout: 1be5,315x52,0,0{257x52,0,0,1,57x52,258,0[57x26,258,0,7,57x25,258,27,8]}
       root: ~/Documents/work/lms-ts
       panes:
-        - nvim .
+        - nvim
         -  #empty
         -  #empty
-  - project:
-      layout: e778,281x45,0,0[281x39,0,0,10,281x5,0,40{140x5,0,40,16,140x5,141,40,18}]
-      root: ~/Documents/projects
+  - project-f:
+      layout: 1be5,315x52,0,0{257x52,0,0,1,57x52,258,0[57x26,258,0,7,57x25,258,27,8]}
+      root: ~/Documents/projects/tasklice
+      panes:
+        -  #empty
+        -  #empty
+        -  #empty
+  - project-b:
+      layout: 1be5,315x52,0,0{257x52,0,0,1,57x52,258,0[57x26,258,0,7,57x25,258,27,8]}
+      root: ~/Documents/projects/tasklice-backend
       panes:
         -  #empty
         -  #empty
         -  #empty
   - study:
-      layout: e778,281x45,0,0[281x39,0,0,10,281x5,0,40{140x5,0,40,16,140x5,141,40,18}]
+      layout: 1be5,315x52,0,0{257x52,0,0,1,57x52,258,0[57x26,258,0,7,57x25,258,27,8]}
       root: ~/Documents/study
       panes:
         -  #empty
         -  #empty
         -  #empty
-  - work:
-      layout: e778,281x45,0,0[281x39,0,0,10,281x5,0,40{140x5,0,40,16,140x5,141,40,18}]
-      root: ~/Documents/work/lms-ts
+  - other:
+      layout: 1be5,315x52,0,0{257x52,0,0,1,57x52,258,0[57x26,258,0,7,57x25,258,27,8]}
+      root: ~/Documents
       panes:
         -  #empty
         -  #empty
