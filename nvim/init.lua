@@ -20,3 +20,6 @@ require('configs.comment')
 require('configs.gitsigns')
 require('configs.illuminate')
 
+
+--[[ COLORS ]]
+require('highlights');

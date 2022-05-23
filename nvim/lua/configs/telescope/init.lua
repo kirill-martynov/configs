@@ -28,8 +28,9 @@ config.setup{
   defaults = {
     prompt_prefix = "$ ",
     file_ignore_patterns = { 'node_modules', '.git/' },
-    color_devicons = false,
+    color_devicons = true,
     path_display = { 'absolute' },
+    selection_caret = "❯ "
   },
 
   pickers = {
@@ -41,3 +42,14 @@ config.setup{
 
 config.load_extension('fzf')
 config.load_extension('frecency')
+
+vim.cmd[[highlight! TelescopeSelection guibg=NONE]]
+
+-- local hl = vim.api.nvim_set_hl
+--
+-- hl(0, "TelescopeSelection", { bg = "none" })
+-- hl(0, "TelescopeSelectionCaret", { bg = "red" })
+-- hl(0, "TelescopeMultiIcon", { bg = "red" })
+-- hl(0, "TelescopeResultsFileIcon", { bg = "red" })
+
+
