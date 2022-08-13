@@ -19,5 +19,6 @@ config.setup({
   sources = {
     formatting.prettierd,
     formatting.stylelint,
+    -- diagnostics.stylelint,
   }
 })

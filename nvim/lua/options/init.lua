@@ -1,5 +1,3 @@
-local cmd = vim.api.nvim_command
-
 local options = {
   swapfile = false,
   clipboard = 'unnamedplus',
@@ -46,17 +44,3 @@ for key, value in pairs(options) do
   vim.opt[key] = value
 end
 
--- vim.cmd('colorscheme solarized-flat')
--- require('github-theme').setup({
---   theme_style = 'dark',
---   dark_sidebar = false,
--- })
-
-require('onedark').setup {
-    style = 'cool',
-
-    highlights = {
-      TelescopeSelection =  { bg = "#2D3343" },
-    }
-}
-require('onedark').load()

@@ -1,7 +1,7 @@
 -- [[ LSP Installer ]]
 local lsp_installer = require("nvim-lsp-installer")
 
-local servers = { 'tsserver', 'eslint', 'cssls', 'stylelint_lsp', 'sumneko_lua' }
+local servers = { 'tsserver', 'eslint', 'cssls', 'stylelint_lsp', 'cssmodules_ls' 'sumneko_lua' }
 
 for _, name in pairs(servers) do
   local server_is_found, server = lsp_installer.get_server(name)

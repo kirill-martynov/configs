@@ -4,17 +4,33 @@ config.setup {
   options = {
     globalstatus = false,
     theme = 'auto',
-    -- component_separators = '',
-    -- section_separators = '',
+    component_separators = '',
+    section_separators = '',
   },
   sections = {
-    lualine_a = {'mode'},
+    lualine_a = {
+      {
+        'mode',
+        separator = { right = ''},
+        padding = { left = 1, right = 0 },
+        -- fmt = function(str) return str:sub(1,1) end
+      }
+    },
     lualine_b = {},
     lualine_c = {
-      'filename',
+      { 'filetype', padding = { left = 1, right = 0 }, colored = false, icon_only = true },
+      {
+        'filename',
+        symbols = {
+          modified = ' ●',
+          readonly = '',
+          unnamed = ''
+        }
+
+      },
       {
         'diagnostics',
-        sources = {"nvim_lsp"},
+        sources = { 'nvim_lsp' },
         symbols = { error = "  ", warn = "  ", hint = "  ", info = "  " },
       },
     },
@@ -26,7 +42,18 @@ config.setup {
       },
       'branch'
     },
-    lualine_y = {},
+    lualine_y = {
+      {
+        'fileformat',
+        symbols = {
+          unix = '', -- e712
+          dos = '',  -- e70f
+          mac = '',  -- e711
+        },
+        padding = { left = 0, right = 1 },
+        separator = { left = ''},
+      }
+    },
     lualine_z = {}
   },
   extensions = { 'nvim-tree' }

@@ -3,11 +3,18 @@ local runtime_path = vim.split(package.path, ';')
 table.insert(runtime_path, "lua/?.lua")
 table.insert(runtime_path, "lua/?/init.lua")
 
-local servers = { 'tsserver', 'eslint', 'stylelint_lsp', 'cssls', 'sumneko_lua' }
+local servers = { 'tsserver', 'eslint', 'stylelint_lsp', 'cssls', --[[ 'cssmodules_ls', ]] 'sumneko_lua' }
 
 local enhance_server_options = {
   ['stylelint_lsp'] = function(opts)
     opts.filetypes = { "css", "scss", "sass", "less" }
+  end,
+  ['cssls'] = function(opts)
+    opts.settings = {
+      css = { validate = false },
+      scss = { validate = false },
+      less = { validate = false },
+    }
   end,
   ['sumneko_lua'] = function(opts)
     opts.settings = {

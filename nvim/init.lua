@@ -1,14 +1,15 @@
--- [[ BASIC ]]
+-- [[ INSTALLATION ]]
+require('plugins')
+
+--[[ BASIC ]]
 require('variables')
 require('options')
-require('plugins')
 require('mappings')
 
 -- [[ PLUGINS ]]
 require('configs.alpha-nvim')
 require('configs.bufferline')
 require('configs.nvim-tree')
-require('configs.lualine')
 require('configs.telescope')
 require('configs.treesitter')
 require('configs.lsp')
@@ -19,7 +20,11 @@ require('configs.autotag')
 require('configs.comment')
 require('configs.gitsigns')
 require('configs.illuminate')
-
+require('configs.which-key')
+require('configs.lualine')
 
 --[[ COLORS ]]
 require('highlights');
+
+-- [[ CUSTOM ]]
+-- require('configs.winbar')
