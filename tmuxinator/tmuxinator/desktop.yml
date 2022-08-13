@@ -1,0 +1,89 @@
+# /Users/kirchik/.config/tmuxinator/default.yml
+
+name: desktop
+root: ~/
+
+# Optional tmux socket
+# socket_name: foo
+
+# Note that the pre and post options have been deprecated and will be replaced by
+# project hooks.
+
+# Project hooks
+
+# Runs on project start, always
+# on_project_start: command
+
+# Run on project start, the first time
+# on_project_first_start: command
+
+# Run on project start, after the first time
+# on_project_restart: command
+
+# Run on project exit ( detaching from tmux session )
+# on_project_exit: command
+
+# Run on project stop
+# on_project_stop: command
+
+# Runs in each window and pane before window/pane specific commands. Useful for setting up interpreter versions.
+# pre_window: rbenv shell 2.0.0-p247
+
+# Pass command line options to tmux. Useful for specifying a different tmux.conf.
+tmux_options: -f ~/.config/tmux/.tmux.conf
+
+# Change the command to call tmux.  This can be used by derivatives/wrappers like byobu.
+# tmux_command: byobu
+
+# Specifies (by name or index) which window will be selected on project startup. If not set, the first window is used.
+# startup_window: editor
+
+# Specifies (by index) which pane of the specified window will be selected on project startup. If not set, the first pane is used.
+# startup_pane: 1
+
+# Controls whether the tmux session should be attached to automatically. Defaults to true.
+# attach: false
+
+windows:
+  - main:
+      layout: 29f7,160x42,0,0{79x42,0,0,0,80x42,80,0[80x21,80,0,2,80x20,80,22,4]}
+      root: ~
+      panes:
+        -  #empty
+        -  #empty
+        -  #empty
+  - work:
+      layout: 1be5,315x52,0,0{257x52,0,0,1,57x52,258,0[57x26,258,0,7,57x25,258,27,8]}
+      root: ~/Documents/work/lms-ts
+      panes:
+        - nvim
+        -  #empty
+        -  #empty
+  - project-f:
+      layout: 1be5,315x52,0,0{257x52,0,0,1,57x52,258,0[57x26,258,0,7,57x25,258,27,8]}
+      root: ~/Documents/projects/tasklice
+      panes:
+        -  #empty
+        -  #empty
+        -  #empty
+  - project-b:
+      layout: 1be5,315x52,0,0{257x52,0,0,1,57x52,258,0[57x26,258,0,7,57x25,258,27,8]}
+      root: ~/Documents/projects/tasklice-backend
+      panes:
+        -  #empty
+        -  #empty
+        -  #empty
+  - study:
+      layout: 1be5,315x52,0,0{257x52,0,0,1,57x52,258,0[57x26,258,0,7,57x25,258,27,8]}
+      root: ~/Documents/study
+      panes:
+        -  #empty
+        -  #empty
+        -  #empty
+  - other:
+      layout: 1be5,315x52,0,0{257x52,0,0,1,57x52,258,0[57x26,258,0,7,57x25,258,27,8]}
+      root: ~/Documents
+      panes:
+        -  #empty
+        -  #empty
+        -  #empty
