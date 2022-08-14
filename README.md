@@ -9,3 +9,11 @@ defaults write com.apple.finder CreateDesktop false
 
 killall Finder
 ```
+
+Remove dock autohide animation
+
+```
+defaults write com.apple.dock autohide-time-modifier -int 0;
+
+killall Dock
+```
