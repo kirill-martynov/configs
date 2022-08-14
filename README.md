@@ -25,4 +25,5 @@ killall Dock
 
 ## Neovim
 
+Set up Neovim on a new M2 MacBook Air for coding React, TypeScript, Tailwind CSS, etc.
 [![Thumbnail](http://img.youtube.com/vi/ajmK0ZNcM4Q/0.jpg)](http://www.youtube.com/watch?v=ajmK0ZNcM4Q)
