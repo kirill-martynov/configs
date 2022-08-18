@@ -25,6 +25,3 @@ require('configs.lualine')
 
 --[[ COLORS ]]
 require('highlights');
-
--- [[ CUSTOM ]]
--- require('configs.winbar')

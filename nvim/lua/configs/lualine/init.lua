@@ -3,7 +3,7 @@ local config = require('lualine')
 config.setup {
   options = {
     globalstatus = false,
-    theme = 'auto',
+    theme = 'solarized_dark',
     component_separators = '',
     section_separators = '',
   },
@@ -21,6 +21,7 @@ config.setup {
       { 'filetype', padding = { left = 1, right = 0 }, colored = false, icon_only = true },
       {
         'filename',
+        path = 1,
         symbols = {
           modified = ' ●',
           readonly = '',

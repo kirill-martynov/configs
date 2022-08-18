@@ -7,6 +7,10 @@ return require('packer').startup(function(use)
   use { 'navarasu/onedark.nvim' }
   use { 'projekt0n/github-nvim-theme' }
   use { 'ishan9299/nvim-solarized-lua' }
+  use {
+    'svrana/neosolarized.nvim',
+    requires = { 'tjdevries/colorbuddy.nvim' }
+  }
   use { 'kyazdani42/nvim-web-devicons' }
   use { 'goolord/alpha-nvim' }
   use { 'kyazdani42/nvim-tree.lua' }

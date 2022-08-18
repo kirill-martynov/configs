@@ -3,7 +3,8 @@ local config = require('nvim-tree')
 config.setup {
   hijack_cursor = true,
   view = {
-    width = 35
+    width = 35,
+    hide_root_folder = true,
   },
   update_focused_file = {
     enable      = true,

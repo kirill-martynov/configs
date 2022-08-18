@@ -3,7 +3,7 @@ local runtime_path = vim.split(package.path, ';')
 table.insert(runtime_path, "lua/?.lua")
 table.insert(runtime_path, "lua/?/init.lua")
 
-local servers = { 'tsserver', 'eslint', 'stylelint_lsp', 'cssls', --[[ 'cssmodules_ls', ]] 'sumneko_lua' }
+local servers = { 'tsserver', 'eslint', 'stylelint_lsp', 'cssls', 'cssmodules_ls', 'sumneko_lua' }
 
 local enhance_server_options = {
   ['stylelint_lsp'] = function(opts)
@@ -20,8 +20,6 @@ local enhance_server_options = {
     opts.settings = {
       Lua = {
         runtime = { version = 'LuaJIT', path = runtime_path },
-        diagnostics = { globals = { 'vim' } },
-        workspace = { library = vim.api.nvim_get_runtime_file("", true) },
         telemetry = { enable = false },
       },
     }

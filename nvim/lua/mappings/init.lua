@@ -1,6 +1,7 @@
 -- [[ keys ]]
 local map = vim.api.nvim_set_keymap
 local default_opts = { noremap = true, silent = true }
+local keymap = vim.keymap
 
 -- [[ Bufferline ]]
 map('n', '<Tab>', ':BufferLineCycleNext<CR>', default_opts)
@@ -27,3 +28,12 @@ map('n', '<leader>p', '<cmd>lua require"illuminate".next_reference{reverse=true,
 
 -- [[ Search ]]
 map('n', '<leader>l', ':noh<CR>', default_opts)
+
+map('n', '<C-w><', ':vertical resize -20<CR>', default_opts)
+map('n', '<C-w>>', ':vertical resize +20<CR>' ,default_opts)
+
+-- Resize window
+--[[ keymap.set('n', '<C-w><left>', '<C-w>< :vertical resize +10') ]]
+--[[ keymap.set('n', '<C-w><right>', '<C-w>> :vertical resize -10') ]]
+--[[ keymap.set('n', '<C-w><up>', '<C-w>+') ]]
+--[[ keymap.set('n', '<C-w><down>', '<C-w>-') ]]

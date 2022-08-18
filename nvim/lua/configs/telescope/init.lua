@@ -41,7 +41,7 @@ config.setup{
 }
 
 config.load_extension('fzf')
-config.load_extension('frecency')
+-- config.load_extension('frecency')
 
 vim.cmd[[highlight! TelescopeSelection guibg=NONE]]
 
