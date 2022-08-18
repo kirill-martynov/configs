@@ -30,7 +30,7 @@ root: ~/
 # pre_window: rbenv shell 2.0.0-p247
 
 # Pass command line options to tmux. Useful for specifying a different tmux.conf.
-tmux_options: -f ~/.config/tmux/.tmux.conf
+tmux_options: -f ~/.config/tmux/tmux.conf
 
 # Change the command to call tmux.  This can be used by derivatives/wrappers like byobu.
 # tmux_command: byobu
@@ -53,35 +53,35 @@ windows:
         -  #empty
         -  #empty
   - work:
-      layout: 1be5,315x52,0,0{257x52,0,0,1,57x52,258,0[57x26,258,0,7,57x25,258,27,8]}
+      layout: cb36,297x53,0,0[297x45,0,0,2,297x7,0,46{147x7,0,46,18,149x7,148,46,19}]
       root: ~/Documents/work/lms-ts
       panes:
-        - nvim
+        -  #empty
         -  #empty
         -  #empty
   - project-f:
-      layout: 1be5,315x52,0,0{257x52,0,0,1,57x52,258,0[57x26,258,0,7,57x25,258,27,8]}
+      layout: cb36,297x53,0,0[297x45,0,0,2,297x7,0,46{147x7,0,46,18,149x7,148,46,19}]
       root: ~/Documents/projects/tasklice
       panes:
         -  #empty
         -  #empty
         -  #empty
   - project-b:
-      layout: 1be5,315x52,0,0{257x52,0,0,1,57x52,258,0[57x26,258,0,7,57x25,258,27,8]}
+      layout: cb36,297x53,0,0[297x45,0,0,2,297x7,0,46{147x7,0,46,18,149x7,148,46,19}]
       root: ~/Documents/projects/tasklice-backend
       panes:
         -  #empty
         -  #empty
         -  #empty
   - study:
-      layout: 1be5,315x52,0,0{257x52,0,0,1,57x52,258,0[57x26,258,0,7,57x25,258,27,8]}
+      layout: cb36,297x53,0,0[297x45,0,0,2,297x7,0,46{147x7,0,46,18,149x7,148,46,19}]
       root: ~/Documents/study
       panes:
         -  #empty
         -  #empty
         -  #empty
   - other:
-      layout: 1be5,315x52,0,0{257x52,0,0,1,57x52,258,0[57x26,258,0,7,57x25,258,27,8]}
+      layout: cb36,297x53,0,0[297x45,0,0,2,297x7,0,46{147x7,0,46,18,149x7,148,46,19}]
       root: ~/Documents
       panes:
         -  #empty
