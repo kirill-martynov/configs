@@ -1,26 +1,12 @@
 -- [[ Treesitter ]]
-local config = require('nvim-treesitter.configs')
+local config = require("nvim-treesitter.configs")
 
-config.setup {
-  ensure_installed = 'all',
+config.setup({
+  ensure_installed = "all",
+  ignore_install = { "phpdoc" },
 
-  indent = {
-    enable = true
-  },
-
-  highlight = {
-    enable = true,
-    additional_vim_regex_highlighting = false
-  },
-
-  textobjects = {
-    select = {
-      enable = true
-    }
-  },
-
-  context_commentstring = {
-    enable = true,
-    enable_autocmd = false,
-  }
-}
+  highlight = { enable = true, additional_vim_regex_highlighting = false },
+  indent = { enable = true },
+  textobjects = { select = { enable = true, lookahead = true } },
+  context_commentstring = { enable = true, enable_autocmd = false },
+})
