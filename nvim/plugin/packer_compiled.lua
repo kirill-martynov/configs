@@ -214,16 +214,6 @@ _G.packer_plugins = {
     path = "/Users/kirchik/.local/share/nvim/site/pack/packer/start/plenary.nvim",
     url = "https://github.com/nvim-lua/plenary.nvim"
   },
-  ["sqlite.lua"] = {
-    loaded = true,
-    path = "/Users/kirchik/.local/share/nvim/site/pack/packer/start/sqlite.lua",
-    url = "https://github.com/tami5/sqlite.lua"
-  },
-  ["telescope-frecency.nvim"] = {
-    loaded = true,
-    path = "/Users/kirchik/.local/share/nvim/site/pack/packer/start/telescope-frecency.nvim",
-    url = "https://github.com/nvim-telescope/telescope-frecency.nvim"
-  },
   ["telescope-fzf-native.nvim"] = {
     loaded = true,
     path = "/Users/kirchik/.local/share/nvim/site/pack/packer/start/telescope-fzf-native.nvim",
