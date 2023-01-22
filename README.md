@@ -1,5 +1,9 @@
 # configs
 
+## Neovim 
+
+![Setup](./assets/setup.png)
+
 ## OS X
 
 Hide icons from desktop:
