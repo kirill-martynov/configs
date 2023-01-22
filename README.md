@@ -3,6 +3,7 @@
 ## Neovim 
 
 ![Setup](./assets/setup.png)
+kitty, tmux, zsh, neovim
 
 ## OS X
 
