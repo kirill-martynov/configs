@@ -53,35 +53,36 @@ windows:
         -  #empty
         -  #empty
   - work:
-      layout: cb36,297x53,0,0[297x45,0,0,2,297x7,0,46{147x7,0,46,18,149x7,148,46,19}]
+      layout: 1273,281x61,0,0[281x53,0,0,1,281x7,0,54{99x7,0,54,8,91x7,100,54,9,89x7,192,54,18}]
       root: ~/Documents/work/lms-ts
       panes:
         -  #empty
         -  #empty
         -  #empty
+        - cd ~/Documents/work/lms-launcher
   - project-f:
-      layout: cb36,297x53,0,0[297x45,0,0,2,297x7,0,46{147x7,0,46,18,149x7,148,46,19}]
-      root: ~/Documents/projects/tasklice
+      layout: b47f,281x61,0,0[281x53,0,0,1,281x7,0,54{139x7,0,54,8,141x7,140,54,9}]
+      root: ~/Documents/projects
       panes:
         -  #empty
         -  #empty
         -  #empty
   - project-b:
-      layout: cb36,297x53,0,0[297x45,0,0,2,297x7,0,46{147x7,0,46,18,149x7,148,46,19}]
-      root: ~/Documents/projects/tasklice-backend
+      layout: b47f,281x61,0,0[281x53,0,0,1,281x7,0,54{139x7,0,54,8,141x7,140,54,9}]
+      root: ~/Documents/projects
       panes:
         -  #empty
         -  #empty
         -  #empty
   - study:
-      layout: cb36,297x53,0,0[297x45,0,0,2,297x7,0,46{147x7,0,46,18,149x7,148,46,19}]
+      layout: b47f,281x61,0,0[281x53,0,0,1,281x7,0,54{139x7,0,54,8,141x7,140,54,9}]
       root: ~/Documents/study
       panes:
         -  #empty
         -  #empty
         -  #empty
   - other:
-      layout: cb36,297x53,0,0[297x45,0,0,2,297x7,0,46{147x7,0,46,18,149x7,148,46,19}]
+      layout: b47f,281x61,0,0[281x53,0,0,1,281x7,0,54{139x7,0,54,8,141x7,140,54,9}]
       root: ~/Documents
       panes:
         -  #empty

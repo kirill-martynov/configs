@@ -2,7 +2,7 @@
 local config = require("nvim-treesitter.configs")
 
 config.setup({
-  ensure_installed = "all",
+  ensure_installed = { "javascript", "typescript", "tsx", "html", "css", "scss", "jsdoc", "json", "json5", "lua", "yaml", "vim", "markdown" },
   ignore_install = { "phpdoc" },
 
   highlight = { enable = true, additional_vim_regex_highlighting = false },

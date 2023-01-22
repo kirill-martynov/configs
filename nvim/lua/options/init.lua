@@ -1,16 +1,16 @@
 local options = {
   swapfile = false,
-  clipboard = 'unnamedplus',
-  completeopt = 'menu,menuone,noselect',
-  encoding = 'utf8',
-  fileencoding = 'utf8',
-  backspace = 'indent,eol,start',
+  clipboard = "unnamedplus",
+  completeopt = "menu,menuone,noselect",
+  encoding = "utf8",
+  fileencoding = "utf8",
+  backspace = "indent,eol,start",
   updatetime = 100,
 
   -- [[ Theme ]]
   syntax = "ON",
   termguicolors = true,
-  guicursor = '',
+  guicursor = "",
   cursorline = true,
 
   -- [[ Editor ]]
@@ -23,6 +23,8 @@ local options = {
   linebreak = true,
   breakindent = true,
   conceallevel = 0,
+  cmdheight = 1,
+  autoread = true,
 
   -- [[ Context ]]
   number = true,
@@ -37,10 +39,9 @@ local options = {
 
   -- [[ Splits ]]
   splitright = true,
-  splitbelow = true
+  splitbelow = true,
 }
 
 for key, value in pairs(options) do
   vim.opt[key] = value
 end
-

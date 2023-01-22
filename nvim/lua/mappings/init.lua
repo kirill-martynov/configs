@@ -55,18 +55,21 @@ map("n", "<leader>gb", ":Telescope git_branches<CR>", {})
 -- Telescope: git commits list
 map("n", "<leader>gc", ":Telescope git_commits<CR>", {})
 
--- Telescope:
-maps.n["<leader>fo"] = { function() require("telescope.builtin").oldfiles() end, desc = "Search history" }
-maps.n["<leader>sr"] = { function() require("telescope.builtin").registers() end, desc = "Search registers" }
-maps.n["<leader>sk"] = { function() require("telescope.builtin").keymaps() end, desc = "Search keymaps" }
-maps.n["<leader>sc"] = { function() require("telescope.builtin").commands() end, desc = "Search commands" }
+-- Spectre: open search panel
+map("n", "<leader>S", ":lua require('spectre').open()<CR>", {})
 
-maps.n["<leader>lG"] =
-  { function() require("telescope.builtin").lsp_workspace_symbols() end, desc = "Search workspace symbols" }
-maps.n["<leader>lR"] = { function() require("telescope.builtin").lsp_references() end, desc = "Search references" }
-maps.n["<leader>lD"] = { function() require("telescope.builtin").diagnostics() end, desc = "Search diagnostics" }
+-- Telescope:
+--[[ maps.n["<leader>fo"] = { function() require("telescope.builtin").oldfiles() end, desc = "Search history" } ]]
+--[[ maps.n["<leader>sr"] = { function() require("telescope.builtin").registers() end, desc = "Search registers" } ]]
+--[[ maps.n["<leader>sk"] = { function() require("telescope.builtin").keymaps() end, desc = "Search keymaps" } ]]
+--[[ maps.n["<leader>sc"] = { function() require("telescope.builtin").commands() end, desc = "Search commands" } ]]
+--[[]]
+--[[ maps.n["<leader>lG"] = ]]
+--[[   { function() require("telescope.builtin").lsp_workspace_symbols() end, desc = "Search workspace symbols" } ]]
+--[[ maps.n["<leader>lR"] = { function() require("telescope.builtin").lsp_references() end, desc = "Search references" } ]]
+--[[ maps.n["<leader>lD"] = { function() require("telescope.builtin").diagnostics() end, desc = "Search diagnostics" } ]]
 
 -- Spectre
-maps.n["leader>S"] = { function() require("spectre").open() end, desc = "Open search panel" }
+--[[ maps.n["leader>S"] = { function() require("spectre").open() end, desc = "Open search panel" } ]]
 
 utils.set_mappings(maps, {})

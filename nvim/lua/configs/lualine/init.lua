@@ -1,5 +1,32 @@
-local config = require("lualine")
-local navic = require("nvim-navic")
+local config = require "lualine"
+local navic = require "nvim-navic"
+
+local assets = {
+  left_separator = "",
+  right_separator = "",
+  mode_icon = "",
+  dir = "",
+  file = "",
+  lsp = {
+    server = "",
+    error = "",
+    warning = "",
+    info = "",
+    hint = "",
+  },
+  git = {
+    branch = "",
+    added = "",
+    changed = "",
+    removed = "",
+  },
+}
+
+local function dir()
+  local dir_name = vim.fn.fnamemodify(vim.fn.getcwd(), ":t")
+
+  return assets.dir .. " " .. dir_name
+end
 
 local sections = {
   filetype = {
@@ -11,6 +38,7 @@ local sections = {
   },
   filename = {
     "filename",
+    fmt = function(filename) return assets.file .. " " .. filename end,
     symbols = {
       modified = "●",
       readonly = "",
@@ -25,7 +53,6 @@ local winbar = {
     lualine_a = {},
     lualine_b = {},
     lualine_c = {
-      sections.filetype,
       sections.filename,
       {
         navic.get_location,
@@ -41,7 +68,6 @@ local winbar = {
     lualine_a = {},
     lualine_b = {},
     lualine_c = {
-      sections.filetype,
       sections.filename,
     },
     lualine_x = {},
@@ -50,7 +76,7 @@ local winbar = {
   },
 }
 
-config.setup({
+config.setup {
   options = {
     globalstatus = true,
     theme = "catppuccin",
@@ -71,15 +97,14 @@ config.setup({
     },
     lualine_b = {},
     lualine_c = {
-      { "filetype", padding = { left = 1, right = 0 }, colored = false, icon_only = true },
       {
-        "filename",
-        path = 1,
-        symbols = {
-          modified = " ●",
-          readonly = "",
-          unnamed = "",
-        },
+        "progress",
+        color = { bg = "#313244" },
+      },
+      {
+        "location",
+        separator = { right = "" },
+        color = { bg = "#313244" },
       },
       {
         "diagnostics",
@@ -90,24 +115,32 @@ config.setup({
     lualine_x = {
       {
         "diff",
-        colored = true,
         symbols = { added = "  ", modified = " ", removed = " " },
+        --[[ color = { bg = "#313244" }, ]]
+        separator = { left = "" },
+        colored = true,
       },
-      "branch",
-    },
-    lualine_y = {
       {
-        "fileformat",
-        symbols = {
-          unix = "", -- e712
-          dos = "", -- e70f
-          mac = "", -- e711
-        },
-        padding = { left = 0, right = 1 },
+        "branch",
+        separator = { left = "" },
+        color = { fg = "#1E2030", bg = "#F9E2AF" },
+      },
+    },
+    lualine_y = {},
+    lualine_z = {
+      {
+        "filename",
+        path = 0,
+        fmt = function(filename) return assets.file .. " " .. filename end,
+        color = { bg = "#EE99A0" },
+        separator = { left = "" },
+      },
+      {
+        dir,
+        color = { bg = "#F0C6C6" },
         separator = { left = "" },
       },
     },
-    lualine_z = {},
   },
   extensions = { "nvim-tree", "quickfix" },
-})
+}

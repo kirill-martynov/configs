@@ -9,10 +9,10 @@ return require("packer").startup(function(use)
   use { "nvim-lua/plenary.nvim" }
 
   -- Icons
-  use { "kyazdani42/nvim-web-devicons" }
+  --[[ use { "nvim-tree/nvim-web-devicons" } ]]
 
   -- File explorer
-  use { "kyazdani42/nvim-tree.lua" }
+  use { "nvim-tree/nvim-tree.lua" }
 
   -- Bufferline
   use { "akinsho/bufferline.nvim", tag = "*" }

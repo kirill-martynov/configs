@@ -1,6 +1,6 @@
 -- [[ Telescope ]]
-local config = require("telescope")
-local actions = require("telescope.actions")
+local config = require "telescope"
+local actions = require "telescope.actions"
 
 local find_files_config = {
   hidden = true,
@@ -8,7 +8,7 @@ local find_files_config = {
 
   sorting_strategy = "ascending",
   results_title = "",
-  prompt_title = "",
+  prompt_title = "Find Files",
 
   layout_config = {
     horizontal = { width = 90, height = 0.5, prompt_position = "top" },
@@ -22,11 +22,11 @@ local extensions_config = {
   },
 }
 
-config.setup({
+config.setup {
   defaults = {
     prompt_prefix = "$ ",
-    selection_caret = "❯ ",
-    color_devicons = true,
+    entry_prefix = "  ",
+    selection_caret = "  ", -- "❯ ",
     path_display = { "truncate" },
     file_ignore_patterns = { "node_modules", ".git/" },
 
@@ -50,9 +50,9 @@ config.setup({
   },
 
   extensions = extensions_config,
-})
+}
 
-config.load_extension("fzf")
+config.load_extension "fzf"
 -- config.load_extension('frecency')
 
 -- vim.cmd([[highlight! TelescopeSelection guibg=NONE]])
