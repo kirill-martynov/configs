@@ -142,5 +142,5 @@ config.setup {
       },
     },
   },
-  extensions = { "nvim-tree", "quickfix" },
+  extensions = { "quickfix" },
 }
